@@ -1,0 +1,30 @@
+/* Basic Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { line-height: 1.6; color: #333; }
+
+/* Container */
+.container { width: 90%; max-width: 1100px; margin: auto; padding: 2rem 0; }
+
+/* Header */
+header { background: #00aaff; color: white; padding: 4rem 0; text-align: center; }
+header h1 { font-size: 3rem; margin-bottom: 1rem; }
+header p { font-size: 1.2rem; margin-bottom: 2rem; }
+header .btn { background: white; color: #00aaff; padding: 0.8rem 1.5rem; text-decoration: none; font-weight: bold; border-radius: 5px; }
+
+/* Sections */
+section { padding: 4rem 0; }
+section h2 { text-align: center; margin-bottom: 2rem; font-size: 2rem; color: #00aaff; }
+section p { text-align: center; max-width: 700px; margin: auto; }
+
+/* Program Cards */
+.program-cards { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; }
+.card { background: #f4f4f4; padding: 2rem; border-radius: 10px; width: 300px; text-align: center; }
+
+/* Contact Form */
+form { max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 1rem; }
+input, textarea { padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px; }
+button { background: #00aaff; color: white; padding: 0.8rem; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+button:hover { background: #0088cc; }
+
+/* Footer */
+footer { background: #222; color: white; text-align: center; padding: 2rem 0; margin-top: 2rem; }

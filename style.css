@@ -6,7 +6,7 @@ body { line-height: 1.6; color: #333; }
 .container { width: 90%; max-width: 1100px; margin: auto; padding: 2rem 0; }
 
 /* Header */
-header { background: #00aaff; color: white; padding: 4rem 0; text-align: center; }
+header {  color: white; padding: 4rem 0; text-align: center; }
 header h1 { font-size: 3rem; margin-bottom: 1rem; }
 header p { font-size: 1.2rem; margin-bottom: 2rem; }
 header .btn { background: white; color: #00aaff; padding: 0.8rem 1.5rem; text-decoration: none; font-weight: bold; border-radius: 5px; }

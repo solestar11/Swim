@@ -4,79 +4,369 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swim Wellness Program | Rowana Consult</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00aaff',
+                        secondary: '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body>
-    <!-- Header / Hero Section -->
-    <header>
-
-
-<div style="
-    background-image: url('therapy.jpg');
-    background-size: cover;
-    background-position: center;
-     background-repeat: no-repeat;
-    width: 100%;
-    height: 500px;
-    ">
-            <h1>Swim into Wellness</h1>
-            <p>Low-impact aquatic fitness for mobility, strength, and mental wellbeing.</p>
-            <a href="#programs" class="btn">Join Now</a>
+<body class="bg-white text-gray-900">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-primary">Swim Wellness</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#hero" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-primary transition-colors">Services</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-primary transition-colors">Pricing</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-primary" id="mobile-menu-button">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Rowana Consult</h2>
-            <p>We specialize in creating wellness programs that improve physical and mental health through aquatic fitness. Our swim programs are safe, effective, and enjoyable for all ages.</p>
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-white">
+        <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('therapy.jpg');"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
+            <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
+                Swim into <span class="text-primary">Wellness</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Low-impact aquatic fitness for mobility, strength, and mental wellbeing. Transform your health through the power of water.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#services" class="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
+                    Explore Services
+                </a>
+                <a href="#contact" class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">
+                    Get Started
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-primary text-2xl"></i>
         </div>
     </section>
 
-    <!-- Programs Section -->
-    <section id="programs">
-        <div class="container">
-            <h2>Our Programs</h2>
-            <div class="program-cards">
-                <div class="card">
-                    <h3>Aquatic Fitness Classes</h3>
-                    <p>Cardio, strength, and flexibility training in water. Beginner to advanced levels.</p>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">About Rowana Consult</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We specialize in creating transformative wellness programs that improve physical and mental health through aquatic fitness.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Why Choose Aquatic Fitness?</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-water text-primary text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Low Impact, High Results</h4>
+                                <p class="text-gray-600">Perfect for all ages and fitness levels with minimal joint stress.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-brain text-primary text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Mental Wellness</h4>
+                                <p class="text-gray-600">Reduce stress and improve mental clarity through mindful movement.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-users text-primary text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Community Support</h4>
+                                <p class="text-gray-600">Join a supportive community of like-minded wellness enthusiasts.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Therapeutic Swim Sessions</h3>
-                    <p>Low-impact rehab and mobility improvement sessions guided by certified instructors.</p>
+                <div class="bg-gradient-to-br from-blue-50 to-primary/10 rounded-2xl p-8">
+                    <div class="text-center">
+                        <i class="fas fa-swimmer text-6xl text-primary mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Certified Instructors</h3>
+                        <p class="text-gray-600 mb-6">
+                            Our programs are led by certified aquatic fitness professionals with years of experience in rehabilitation and wellness coaching.
+                        </p>
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div>
+                                <div class="text-2xl font-bold text-primary">500+</div>
+                                <div class="text-sm text-gray-600">Happy Clients</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-primary">5</div>
+                                <div class="text-sm text-gray-600">Years Experience</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-primary">100%</div>
+                                <div class="text-sm text-gray-600">Success Rate</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Personalized Coaching</h3>
-                    <p>One-on-one coaching tailored to your health goals and needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Comprehensive aquatic wellness programs designed for every fitness level and health goal.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-swimmer text-4xl text-primary mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Aquatic Fitness Classes</h3>
+                        <p class="text-gray-600 mb-6">Cardio, strength, and flexibility training in water. Beginner to advanced levels available.</p>
+                        <ul class="text-left space-y-2 text-sm text-gray-600">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Low-impact cardio workouts</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Strength building exercises</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Flexibility improvement</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Group motivation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-heartbeat text-4xl text-primary mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Therapeutic Swim Sessions</h3>
+                        <p class="text-gray-600 mb-6">Low-impact rehab and mobility improvement sessions guided by certified instructors.</p>
+                        <ul class="text-left space-y-2 text-sm text-gray-600">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Personalized rehabilitation</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Mobility enhancement</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Pain management</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Medical supervision</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-user-friends text-4xl text-primary mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Personalized Coaching</h3>
+                        <p class="text-gray-600 mb-6">One-on-one coaching tailored to your health goals and specific needs.</p>
+                        <ul class="text-left space-y-2 text-sm text-gray-600">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Custom fitness plans</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Progress tracking</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Nutrition guidance</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>24/7 support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Pricing Plans</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Choose the perfect plan for your wellness journey. All plans include access to our premium facilities.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-secondary rounded-2xl p-8 border border-gray-200">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Starter</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">$49<span class="text-lg font-normal text-gray-600">/month</span></div>
+                        <p class="text-gray-600">Perfect for getting started</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>2 group classes per week</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Access to facilities</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Basic equipment</li>
+                        <li class="flex items-center"><i class="fas fa-times text-gray-400 mr-3"></i>Personal coaching</li>
+                        <li class="flex items-center"><i class="fas fa-times text-gray-400 mr-3"></i>Nutrition planning</li>
+                    </ul>
+                    <button class="w-full bg-gray-200 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
+                        Choose Starter
+                    </button>
+                </div>
+                <div class="bg-primary rounded-2xl p-8 text-white relative transform scale-105">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+                    </div>
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-semibold mb-2">Professional</h3>
+                        <div class="text-4xl font-bold mb-2">$89<span class="text-lg font-normal opacity-80">/month</span></div>
+                        <p class="opacity-80">For serious wellness goals</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-white mr-3"></i>Unlimited group classes</li>
+                        <li class="flex items-center"><i class="fas fa-check text-white mr-3"></i>Premium facilities</li>
+                        <li class="flex items-center"><i class="fas fa-check text-white mr-3"></i>Advanced equipment</li>
+                        <li class="flex items-center"><i class="fas fa-check text-white mr-3"></i>2 personal sessions/month</li>
+                        <li class="flex items-center"><i class="fas fa-check text-white mr-3"></i>Basic nutrition planning</li>
+                    </ul>
+                    <button class="w-full bg-white text-primary py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Choose Professional
+                    </button>
+                </div>
+                <div class="bg-secondary rounded-2xl p-8 border border-gray-200">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Elite</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">$149<span class="text-lg font-normal text-gray-600">/month</span></div>
+                        <p class="text-gray-600">Complete wellness experience</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Unlimited group classes</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>VIP facilities access</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Premium equipment</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Weekly personal coaching</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Custom nutrition plans</li>
+                    </ul>
+                    <button class="w-full bg-gray-200 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
+                        Choose Elite
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <!--
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+    <section id="contact" class="py-20 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Get Started Today</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                    Ready to transform your health? Contact us to schedule your first session or learn more about our programs.
+                </p>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <iframe
+                    aria-label='Contact Us'
+                    frameborder="0"
+                    style="height:500px;width:100%;border:none;border-radius:12px;"
+                    src='https://forms.zohopublic.com/solestar94gm1/form/ContactUs/formperma/jK35evOEhaS_Xf4C0QjRdyF2QaS-jaLW7DkEElouzfo'
+                ></iframe>
+            </div>
         </div>
-    </section> 
-                  -->
-                  <section id="contact">
-<iframe aria-label='Contact Us' frameborder="0" style="height:500px;width:99%;border:none;" src='https://forms.zohopublic.com/solestar94gm1/form/ContactUs/formperma/jK35evOEhaS_Xf4C0QjRdyF2QaS-jaLW7DkEElouzfo'></iframe>               
-                  </section>
+    </section>
+
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Rowana Consult | All Rights Reserved</p>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">Swim Wellness</h3>
+                    <p class="text-gray-400 mb-4">Transforming lives through aquatic fitness and wellness programs.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#services" class="hover:text-primary transition-colors">Aquatic Fitness Classes</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">Therapeutic Sessions</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">Personal Coaching</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#about" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <p><i class="fas fa-envelope mr-2"></i>info@rowanaconsult.com</p>
+                        <p><i class="fas fa-phone mr-2"></i>+1 (555) 123-4567</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Your City, State</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Rowana Consult. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-50 hidden md:hidden">
+        <div class="flex justify-between items-center p-4 border-b">
+            <h1 class="text-2xl font-bold text-primary">Swim Wellness</h1>
+            <button class="text-gray-700" id="close-mobile-menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="flex flex-col p-4 space-y-4">
+            <a href="#hero" class="text-gray-700 hover:text-primary transition-colors py-2">Home</a>
+            <a href="#about" class="text-gray-700 hover:text-primary transition-colors py-2">About</a>
+            <a href="#services" class="text-gray-700 hover:text-primary transition-colors py-2">Services</a>
+            <a href="#pricing" class="text-gray-700 hover:text-primary transition-colors py-2">Pricing</a>
+            <a href="#contact" class="text-gray-700 hover:text-primary transition-colors py-2">Contact</a>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
 
